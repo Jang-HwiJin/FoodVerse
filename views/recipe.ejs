@@ -1,0 +1,39 @@
+<%- include("partials/header") -%>
+
+
+
+<section>
+  <div align="center">
+    <h1><em><%=recipeTitle%></em></h1>
+  </div>
+  <div>
+    <div style="float: left">
+      <img id="recipePicture" src="<%=recipeImg%>" alt="recipe-picture">
+    </div>
+    <div>
+      <p><%=summary%></p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div>
+    <h2><em>The ingredients:</em></h2>
+    <p><% ingredientsList.forEach(function(ingredient){ %>
+      <li id="ingredients"><em><%= ingredient %></em></li>
+      <% }); %>
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Instructions:</h2>
+  <p><%= recipeInstructions %></p>
+</section>
+
+
+
+
+<%- include("partials/footer") -%>

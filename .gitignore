@@ -1,0 +1,8 @@
+.DS_Store
+secrets.txt
+node_modules
+
+#Comment --- Allows you to Comment
+
+#* ---Wild Card, Ignores all files that follow the type.
+# Ex: .txt will ignore all txt files

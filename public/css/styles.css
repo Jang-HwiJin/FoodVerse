@@ -1,0 +1,132 @@
+/* BOOTSTRAP CSS */
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: var(--bs-gray);
+}
+
+.form-control-dark:focus {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* HEADER */
+.nav-pills .nav-link.active {
+  color: #fff;
+  background-color: #000000;
+}
+
+.nav-pills .nav-link.active:hover {
+  color: #fff;
+  background-color: #3d3939;
+}
+
+.nav-link {
+  color: #000000;
+}
+
+.nav-link:hover {
+  color: #3d3939;
+}
+
+/* FOOTER */
+.footer-container {
+  margin-top: 250px;
+}
+
+/* HOME*/
+.btn-success {
+  color: #fff;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.btn-transparent {
+  color: #fff;
+  background-color: #ffffff40;
+  border-color: #fff;
+}
+
+.btn-transparent:hover {
+  color: #d2d2d2;
+  border-color: #d2d2d2;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #3d3939;
+  border-color: #000000;
+}
+
+.jumbotronHome {
+  background: url("/images/homeBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white !important;
+  height: 340px;
+}
+
+.transparent {
+  color: #fff;
+  background: #ffffff40;
+  border-color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+/* RECIPE */
+#ingredients {
+  padding-left: 15px;
+}
+
+#recipePicture {
+  padding: 0 20px 20px;
+}
+
+section {
+  display: grid;
+}
+
+/* About Us */
+.lead {
+  font-size: 2rem;
+}
+
+.px-3 {
+  text-align: center;
+}
+
+/* Features */
