@@ -70,6 +70,18 @@ app.get("/recipe", function(req, res) {
   ingredientsList = [];
 });
 
+app.get("/about", function(req, res) {
+  res.render("about");
+});
+
+app.get("/features", function(req, res) {
+  res.render("features");
+});
+
+app.get("/faq", function(req, res) {
+  res.render("faq");
+});
+
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000");
 });
