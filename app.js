@@ -16,12 +16,8 @@ let summary = "";
 let recipeId = "";
 let recipeImg= "";
 let recipeInstructions = "";
-
-var ingredientsLength ="";
-
-var ingredientsList = [];
-
-
+let ingredientsLength ="";
+let ingredientsList = [];
 
 app.get("/", function(req, res) {
   res.render("home");
@@ -33,13 +29,16 @@ app.post("/", function(req, res) {
   const nbrRecipe = 1;
   let url = "https://api.spoonacular.com/recipes/random?apiKey=" + apiKey + "&number=" + nbrRecipe + "&tags=" + recipeTags;
 
+  //Write the status code to console log to see if it was successful
   https.get(url, function(response){
-    console.log(response.statusCode); //Write the status code to console log to see if it was successful
+    console.log(response.statusCode);
 
     let chunks = "";
     response.on("data", function(data){
       chunks = chunks + data;
       });
+
+    // Parsing the data from API
     response.on("end", function(){
       recipeData = JSON.parse(chunks);
       recipeTitle = recipeData.recipes[0].title;
@@ -50,6 +49,7 @@ app.post("/", function(req, res) {
 
       ingredientsLength = recipeData.recipes[0].extendedIngredients.length;
 
+      // Adding the ingredients to the list
       for(var i = 0; i < ingredientsLength; i++) {
         ingredientsList.push(" " + recipeData.recipes[0].extendedIngredients[i].name);
       }
@@ -70,7 +70,7 @@ app.get("/recipe", function(req, res) {
   ingredientsList = [];
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000");
 });
 
